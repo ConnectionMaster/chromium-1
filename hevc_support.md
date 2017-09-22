@@ -43,7 +43,7 @@ ffmpeg_yasm_sources += [
 
 in the files:
 - **src/third_party/ffmpeg/chromium/config/YOUR_BRAND/win/YOUR_ARCH/config.asm**
-- **src/third_party/ffmpeg/chromium/config/YOUR_BRAND/win/YOUR_ARCH/config.asm**
+- **src/third_party/ffmpeg/chromium/config/YOUR_BRAND/win/YOUR_ARCH/config.h**
 
 add or replace some parameters..
 
@@ -98,7 +98,7 @@ ffmpeg_yasm_sources += [
 
 in the files:
 - **src/third_party/ffmpeg/chromium/config/YOUR_BRAND/win/YOUR_ARCH/config.asm**
-- **src/third_party/ffmpeg/chromium/config/YOUR_BRAND/win/YOUR_ARCH/config.asm**
+- **src/third_party/ffmpeg/chromium/config/YOUR_BRAND/win/YOUR_ARCH/config.h**
 
 add or replace some parameters..
 
