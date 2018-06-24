@@ -76,3 +76,24 @@ add an option:
 &ff_hevc_demuxer
 ```
 
+in the file:
+- **src/media/base/mime_util_internal.cc**
+
+above the line:
+```c
+
+if (video_codec != kUnknownVideoCodec) {
+...
+...
+```
+
+add the code:
+```c
+if (video_codec == kCodecHEVC) {
+#if BUILDFLAG(ENABLE_HEVC_DEMUXING)
+  return IsSupported;
+#else
+  return IsNotSupported;
+#endif
+}
+```
