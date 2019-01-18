@@ -1,10 +1,10 @@
-## Building Chromium x64 with Visual Studio 2015 Update 3
+## Building Chromium x64 with Visual Studio 2017
  
 #### Requirements: 
     - Windows x64
     - 8GB RAM or more
     - free space ~30GB (sources ~20GB, each build (release/debug x32/x64) ~10GB)
-    - MS Visual Studio 2015 with Update 3 (custom install, check "Visual C++" and "Win10 SDK")
+    - MS Visual Studio 2017 (custom install, check "Visual C++" and "Win10 SDK")
  
 Download https://storage.googleapis.com/chrome-infra/depot_tools.zip and extract it (i.e. D:\depot_tools)
  
@@ -32,7 +32,7 @@ cd /D D:\depot_tools
 set PATH=D:\depot_tools;%PATH%
 set DEPOT_TOOLS_WIN_TOOLCHAIN=0
 set GYP_CHROMIUM_NO_ACTION=1
-set GYP_MSVS_VERSION=2015
+set GYP_MSVS_VERSION=2017
 gclient
 fetch --nohooks chromium --nosvn=True
 ```
@@ -60,7 +60,7 @@ proprietary_codecs = true
 symbol_level = 0
 syzygy_optimize = true
 target_cpu = "x64"
-visual_studio_version = "2015"
+visual_studio_version = "2017"
 exclude_unwind_tables = true
 remove_webcore_debug_symbols = true
 ```
@@ -83,7 +83,7 @@ cd /D D:\depot_tools\src
 set PATH=D:\depot_tools;%PATH%
 set DEPOT_TOOLS_WIN_TOOLCHAIN=0
 set GYP_CHROMIUM_NO_ACTION=1
-set GYP_MSVS_VERSION=2015
+set GYP_MSVS_VERSION=2017
 git checkout lkgr
 git pull
 gclient sync --with_branch_heads -f -R
